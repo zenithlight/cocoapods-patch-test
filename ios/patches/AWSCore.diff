@@ -1,0 +1,17 @@
+diff --git a/cocoapods-patch-20201008-28432-e4q2te/AWSCore/AWSCore/Utility/AWSCategory.m b/Pods/AWSCore/AWSCore/Utility/AWSCategory.m
+index f466504..8a6f03e 100644
+--- a/cocoapods-patch-20201008-28432-e4q2te/AWSCore/AWSCore/Utility/AWSCategory.m
++++ b/Pods/AWSCore/AWSCore/Utility/AWSCategory.m
+@@ -476,11 +476,7 @@ static NSTimeInterval _clockskew = 0.0;
+ }
+ 
+ - (BOOL)aws_isVirtualHostedStyleCompliant {
+-    if (![self aws_isDNSBucketName]) {
+-        return NO;
+-    } else {
+-        return ![self aws_contains:@"."];
+-    }
++    return NO;
+ }
+ 
+ - (AWSRegionType)aws_regionTypeValue {

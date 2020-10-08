@@ -1,0 +1,9 @@
+plugin 'cocoapods-patch'
+
+use_frameworks!
+
+target 'cocoapods-patch-test' do
+  project 'src/cocoapods-patch-test.xcodeproj'
+
+  pod "AWSCore"
+end
